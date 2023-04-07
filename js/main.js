@@ -1,8 +1,8 @@
 //Prima di tutto raccogliamo i dati necessari per fare i vari calcoli
 
-let backend = 20.50;    //All'ora
-let frontend = 15.30;   //All'ora
-let analisi = 33.60;    //All'ora
+//let backend = 20.50;    //All'ora
+//let frontend = 15.30;   //All'ora
+//let analisi = 33.60;    //All'ora
 
 let codiciDisponibili = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 let sconto = 0.25;
@@ -20,7 +20,6 @@ function buttonForm(event) {
     let oreRichieste = parseInt(oreRichiesteStringa);
 
     let codiceSconto = document.getElementById("discountCode").value;
-    let codiceScontoRichiesto = codiciDisponibili.includes(codiceSconto);
 
     /*console.log(tipoLavoro);
     console.log(oreRichieste);
@@ -38,26 +37,19 @@ function buttonForm(event) {
             break;
     }
 
-    let finalPrice = tipoLavoro * oreRichieste;
+    let finalPrice = commission * oreRichieste;
+
+    //Chiedo al programma se è presente il codice di sconto richiesto tra quelli disponibili.
+    //Se si, verrà appricato, altrimenti un alert avviserà l'utente che non è valido.
     
+    let codiceScontoRichiesto = codiciDisponibili.includes(codiceSconto);
+
     if(codiceScontoRichiesto){
         finalPrice = finalPrice * sconto;
+
     } else {
-        alert("Il codice sconto non è più valido!");
+        alert("Il codice sconto non è valido!");
     }
     
-    //let finalPrice = calcoloPrezzo().toFixed(2);
     document.getElementById("prezzoFinale").innerHTML = "Il prezzo finale è di: " + finalPrice + " €";
 }
-/*
-function calcoloPrezzo(oreRichieste, tipoLavoro, codiceScontoRichiesto) {
-    let finalPrice = tipoLavoro * oreRichieste;
-    
-    if(codiceScontoRichiesto){
-        finalPrice = finalPrice * sconto;
-    } else {
-        alert("Il codice sconto non è più valido!");
-    }
-    
-    return(finalPrice)
-}*/
