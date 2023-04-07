@@ -25,5 +25,20 @@ function buttonForm(event) {
     console.log(oreRichieste);
     console.log(codiceSconto);*/
 
+    switch(tipoLavoro){
+        case "backend":
+            commission = 20.50;
+            break;
+        case "frontend":
+            commission = 15.30;
+            break;    
+        case "projectAnalisys":
+            commission = 33.60;
+            break;
+    }
+
 }
+
+
+
 
