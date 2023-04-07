@@ -20,6 +20,7 @@ function buttonForm(event) {
     let oreRichieste = parseInt(oreRichiesteStringa);
 
     let codiceSconto = document.getElementById("discountCode").value;
+    let codiceScontoRichiesto = codiciDisponibili.includes(codiceSconto);
 
     /*console.log(tipoLavoro);
     console.log(oreRichieste);
@@ -37,8 +38,26 @@ function buttonForm(event) {
             break;
     }
 
+    let finalPrice = tipoLavoro * oreRichieste;
+    
+    if(codiceScontoRichiesto){
+        finalPrice = finalPrice * sconto;
+    } else {
+        alert("Il codice sconto non è più valido!");
+    }
+    
+    //let finalPrice = calcoloPrezzo().toFixed(2);
+    document.getElementById("prezzoFinale").innerHTML = "Il prezzo finale è di: " + finalPrice + " €";
 }
-
-
-
-
+/*
+function calcoloPrezzo(oreRichieste, tipoLavoro, codiceScontoRichiesto) {
+    let finalPrice = tipoLavoro * oreRichieste;
+    
+    if(codiceScontoRichiesto){
+        finalPrice = finalPrice * sconto;
+    } else {
+        alert("Il codice sconto non è più valido!");
+    }
+    
+    return(finalPrice)
+}*/
