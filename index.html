@@ -14,16 +14,22 @@
     <link rel="icon" href="favicon.ico" />
     <title>Portfolio</title>
   </head>
+
   <body>
+
       <!-- inizio navbar -->
+
       <nav class="navbar navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand text-info" href="#">Portfolio</a>
           <a class="text-info text-uppercase" href="#contact">Contact me</a>               
         </div>
       </nav>
+
     <!-- fine navbar -->
+
     <!-- inizio header -->
+
     <header>      
       <div class="p-5 mb-4 bg-info bg-gradient">
         <div class="row align-items-center justify-content-center">    
@@ -37,14 +43,21 @@
         </div>
       </div>
     </header>
+
     <!-- fine header -->
+
     <!-- inizio main -->
+
     <main>
+
       <!-- inizio section portfolio -->
+
       <section id="portfolio" class="mb-5">
         <div class="container">
           <h2 class="text-center text-uppercase mb-3">Portfolio</h2>
+
           <div class="row">
+
             <div class="col-md-6 col-lg-4 mb-5">
               <div class="card">
                 <img class="card-img-top" src="img/portfolio/cabin.png" alt="cabin">
@@ -55,6 +68,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 col-lg-4 mb-5">
               <div class="card">
                 <img class="card-img-top" src="img/portfolio/cake.png" alt="cake">
@@ -65,6 +79,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 col-lg-4 mb-5">
               <div class="card">
                 <img class="card-img-top" src="img/portfolio/circus.png" alt="circus">
@@ -75,6 +90,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 col-lg-4 mb-5">
               <div class="card">
                 <img class="card-img-top" src="img/portfolio/game.png" alt="game">
@@ -85,6 +101,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 col-lg-4 mb-5">
               <div class="card">
                 <img class="card-img-top" src="img/portfolio/safe.png" alt="safe">
@@ -95,6 +112,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 col-lg-4 mb-5">
               <div class="card">
                 <img class="card-img-top" src="img/portfolio/submarine.png" alt="submarine">
@@ -105,22 +123,90 @@
                 </div>
               </div>
             </div>
+
           </div>
-        </div>    
-      </section>
-      <!-- fine section portfolio -->
-      <!-- inizio section offer-->
-      <section id="offer" class="bg-info">
-        <div class="container p-4">
-          <h2 class="text-center text-uppercase">Want an offer?</h2>
-          <!-- TODO: PROGETTARE IL FORM QUI -->
+
         </div>   
+
       </section>
+
+      <!-- fine section portfolio -->
+
+      <!-- inizio section offer-->
+
+      <section id="offer" class="bg-info">
+
+        <div class="container p-4">
+
+          <h2 class="text-center text-uppercase">Want an offer?</h2>
+
+          <!-- TODO: PROGETTARE IL FORM QUI -->
+
+          <form>
+
+            <div class="col-md-6">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" placeholder="Enter your first name...">
+            </div>
+            
+            <div class="col-md-6">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" placeholder="Enter your last name...">
+            </div>
+
+            <div class="col-md-6">
+              <label for="emailUtente">Email address</label>
+              <input type="email" id="emailUtente" placeholder="name@example.com">
+            </div>
+
+            <div class="col-md-6">
+              <label for="hoursRequest">Hours request</label>
+              <input type="number" min="1" id="hoursRequest" placeholder="Hours requested...">
+            </div>
+
+            <div class="col-md-6">
+              <label for="typeOfWork">Type of work</label>
+                <select id="typeOfWork">                              
+                  <option value="backend">Backend Development</option>
+                  <option value="frontend">Frontend Development</option>
+                  <option value="projectAnalisys">Project Analisys</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+              <label for="discountCode">Discount Code</label>
+              <input type="text" id="discountCode">
+            </div>
+
+            <div class="col-12">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Specify your work commission..."></textarea>
+            </div>
+
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-warning">Send</button>
+            </div>
+
+            <div class="col-12">
+              <p id="prezzoFinale" class="fs-3 mb-5"></p>
+            </div>
+
+          </form>
+
+        </div> 
+
+      </section>
+
       <!-- fine section offer-->
+
     </main>
+
     <!-- fine main -->
+
     <!-- inizio footer -->
+
     <footer class="footer bg-dark text-center text-secondary pt-5">
+
       <div class="container">
           <div class="row">
               <!-- Footer Location-->
@@ -134,11 +220,15 @@
               </div>
           </div>
       </div>
+
       <!-- Copyright Section-->
+
       <div class="py-4 text-secondary bg-dark text-center">
           <small>Copyright &copy; Your Website 2021</small>
       </div>
+
   </footer>
+
   <!-- fine footer -->
 
   <script type="text/javascript" src="./js/main.js"></script>
@@ -148,5 +238,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
   </body>
+
 </html>
