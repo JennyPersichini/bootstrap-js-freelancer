@@ -46,15 +46,19 @@ function buttonForm(event) {
 
     if(codiceScontoRichiesto){
         finalPrice = finalPrice -= sconto;
-        nuoviCodiciDisponibili = removeElementFromArray(codiciDisponibili, codiceScontoRichiesto);
 
+        //Prova bonus
+        nuoviCodiciDisponibili = removeElementFromArray(codiciDisponibili, codiceScontoRichiesto);
         console.log(nuoviCodiciDisponibili);
+
     } else {
         alert("Il codice sconto non è valido!");
     }
     
-    document.getElementById("prezzoFinale").innerHTML = "Il prezzo finale è di: " + finalPrice + " €";
+    document.getElementById("prezzoFinale").innerHTML = "Il prezzo finale è di: " + finalPrice.toFixed(2) + " €";
 }
+
+//Prova bonus
 
 function removeElementFromArray(array, elementRemoved){
 
