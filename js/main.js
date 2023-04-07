@@ -11,4 +11,19 @@ function buttonForm(event) {
     event.preventDefault();
 
     //Nel click quindi bisogna calcolare il tipo di lavoro * le ore richieste, ed applicare un codice sconto (se disponibile!).
+
+    //Estrapolo i valori che mi servono per il calcolo.
+
+    let tipoLavoro = document.getElementById("typeOfWork").value;
+
+    let oreRichiesteStringa = document.getElementById("hoursRequest").value;
+    let oreRichieste = parseInt(oreRichiesteStringa);
+
+    let codiceSconto = document.getElementById("discountCode").value;
+
+    /*console.log(tipoLavoro);
+    console.log(oreRichieste);
+    console.log(codiceSconto);*/
+
 }
+
